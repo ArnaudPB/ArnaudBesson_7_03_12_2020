@@ -36,10 +36,6 @@ const errorHandler = error => {
 };
 
 const server = http.createServer(app);
-server.getConnections('/', function(req, res) {
-    res.setHeader('Content-Type', 'text/html');
-    res.status(200).send('<h1>You have succesfully reached the server</h1>');
-});
 
 server.on('error', errorHandler);
 server.on('listening', () => {
